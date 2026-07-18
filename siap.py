@@ -52,8 +52,8 @@ def print_banner():
 ▒▒█████████     █████    █████   █████    █████       
  ▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒    ▒▒▒▒▒   ▒▒▒▒▒    ▒▒▒▒▒        
                                                       
-       SQUAD INDEPENDENCE ARMY FOR PALESTINE 
-
+               SQUAD INDEPENDENCE ARMY FOR PALESTINE 
+=======================================================
 """ + "\033[0m")
 
 def test_url(url, method='HEAD', timeout=5):
@@ -82,9 +82,9 @@ def test_url(url, method='HEAD', timeout=5):
 def main():
     print_banner()
     url = input("Input URL: ")
-    method = input("Metode (HEAD/GET) [default=GET]: ").upper() or 'GET'
+    method = input("Metode (HEAD/GET) [default=HEAD]: ").upper() or 'HEAD'
     threads = int(input("Thread [default=100]: ") or 100)
-    timeout = int(input("Timeout [default=10]: ") or 10)
+    timeout = int(input("Timeout [default=5]: ") or 5)
     durasi = int(input("Duration [default=300]: ") or 300)
 
     def worker():
