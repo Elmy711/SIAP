@@ -52,7 +52,7 @@ def print_banner():
 ▒▒█████████     █████    █████   █████    █████       
  ▒▒▒▒▒▒▒▒▒     ▒▒▒▒▒    ▒▒▒▒▒   ▒▒▒▒▒    ▒▒▒▒▒        
                                                       
-               SQUAD INDEPENDENCE ARMY FOR PALESTINE 
+  SQUAD INDEPENDENCE ARMY FOR PALESTINE 
 =======================================================
 """ + "\033[0m")
 
