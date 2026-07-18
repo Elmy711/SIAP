@@ -56,7 +56,7 @@ def print_banner():
 =======================================================
 """ 
     print("\033[1;34m" + banner + "\033[0m")
-    print_banner()
+
     
 def test_url(url, method='HEAD', timeout=5):
     headers = {'User-Agent': random.choice(user_agents)}
