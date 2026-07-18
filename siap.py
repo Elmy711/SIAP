@@ -55,7 +55,7 @@ def print_banner():
          SQUAD INDEPENDENCE ARMY FOR PALESTINE 
 =======================================================
 """ 
-    print("\033[1;34;47m" + banner + "\033[0m")
+    print("\033[1;36;47m" + banner + "\033[0m")
 
     
 def test_url(url, method='HEAD', timeout=5):
