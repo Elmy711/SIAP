@@ -3,7 +3,7 @@ import random
 import threading
 import time
 
-# 30 User-Agent
+
 user_agents = [
     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
     'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0',
@@ -66,7 +66,7 @@ def test_url(url, method='HEAD', timeout=5):
             response = requests.get(url, headers=headers, timeout=timeout)
         else:
             with lock:
-                print(f"Metode {method} tidak didukung!")
+                print(f"Methods {method} not support!")
             return
         duration = time.time() - start_time
         status_code = response.status_code
@@ -74,7 +74,7 @@ def test_url(url, method='HEAD', timeout=5):
         with lock:
             print(f"URL: {url}")
             print(f"Status: {color}{status_code}\033[0m | Time: {duration:.3f}s")
-            # print(f"Headers: {response.headers}")
+            
     except requests.RequestException as e:
         with lock:
             print(f"Error: {e}")
@@ -91,7 +91,7 @@ def main():
         start_time = time.time()
         while time.time() - start_time < durasi:
             test_url(url, method, timeout)
-            time.sleep(0.1)  # jeda antar request
+            time.sleep(0.5)  
 
     threads_list = []
     for _ in range(threads):
